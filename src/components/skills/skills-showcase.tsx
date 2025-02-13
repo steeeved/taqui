@@ -1,16 +1,11 @@
-'use client';
+import { AnimatePresence } from "framer-motion";
 
-import Heading from '@/components/Heading';
-import { AnimatePresence } from 'framer-motion';
-import { Badge } from '@/components/ui/badge';
-import { LightbulbIcon } from 'lucide-react';
 import SkillPill, {
   type SkillPillProps,
-} from '@/components/skills/skills-pill';
-import FadeRight from '@/components/animation/fade-right';
-import { useDebounceValue } from '@/hooks/useDebounceValue';
-import { useScreenBreakpoint } from '@/hooks/useScreenBreakpoint';
-import { SKILLS_DATA } from '@/utility/skills';
+} from "@/components/skills/skills-pill";
+import FadeRight from "../animation/fade-right";
+import { useScreenBreakpoint } from "@/hooks/useScreenBreakpoint";
+import { useDebounceValue } from "@/hooks/useDebounceValue";
 
 export interface SkillsShowcaseProps {
   skills: {
@@ -19,20 +14,16 @@ export interface SkillsShowcaseProps {
   }[];
 }
 
-const SkillPage = () => {
+export default function SkillsShowcase({ skills }: SkillsShowcaseProps) {
   const isMobile = useScreenBreakpoint(640);
   const isMobileDebonced = useDebounceValue(isMobile, 600);
-
   return (
-    // SKILLS PAGE
-    <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
-      <Badge variant="secondary" className="gap-1.5 py-1 ">
-        <LightbulbIcon className="w-4 h-4" />
-        My Skills
-      </Badge>
-      <div className="flex flex-col gap-3">
-        <Heading>My Technical Experience/Skills.</Heading>
-        {SKILLS_DATA.map((section) => (
+    <section className="overflow-hidden px-6 py-32 sm:px-14 md:px-20">
+      <div className="relative mx-auto max-w-7xl">
+        <h2 className="text-xl font-semibold text-accent sm:text-4xl">
+          Skills
+        </h2>
+        {skills.map((section) => (
           <AnimatePresence key={section.sectionName}>
             <div className="mt-4">
               <span className="text-xs font-semibold text-foreground sm:text-sm">
@@ -55,8 +46,6 @@ const SkillPage = () => {
           </AnimatePresence>
         ))}
       </div>
-    </div>
+    </section>
   );
-};
-
-export default SkillPage;
+}

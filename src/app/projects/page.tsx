@@ -9,13 +9,12 @@ const projectsPage = () => {
   const Projects = [
     {
       title: "Devzone - A community chat app for devs",
-      description:
-        `DevZone is the ultimate chat platform for developers
+      description: `DevZone is the ultimate chat platform for developers
 to connect, collaborate, and code together. Join the conversation and level up your coding journey.`,
       tags: ["Zustand", "Supabase", "Shadcn Ui", "Nextjs"],
       link: "https://devzone-ti.vercel.app/",
     },
-   
+
     {
       title: "itZmyLink- One Page many Links",
       description:
@@ -34,7 +33,7 @@ to connect, collaborate, and code together. Join the conversation and level up y
       title: "Mixcn-ui- Reusable components for Nextjs",
       description:
         "This is Nextjs app with a Collection of Nextjs Components - (Currently under Devlelopment) ",
-      tags: ["Nextjs", "Shadcnui", "Npx","Library"],
+      tags: ["Nextjs", "Shadcnui", "Npx", "Library"],
       link: "https://mixcn-ui.vercel.app",
     },
     {
@@ -51,7 +50,7 @@ to connect, collaborate, and code together. Join the conversation and level up y
       tags: ["Nextjs", "Shadcnui", "Zod", "React Hook Form "],
       link: "https://formcraft-ti.vercel.app/",
     },
-    
+
     {
       title: "KryptoKapital- Investing in Cryptocurreny",
       description:
@@ -90,9 +89,8 @@ to connect, collaborate, and code together. Join the conversation and level up y
   ];
 
   return (
-    // PROJECT PAGE
-    <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
-      <Badge variant="secondary" className="gap-1.5 py-1 ">
+    <div className="w-full relative flex flex-col items-start gap-5 pt-44 py-10 md:pt-40">
+      <Badge variant="secondary" className="gap-1.5 py-1">
         <Layers className="h-4 w-4" />
         Projects
       </Badge>

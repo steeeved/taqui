@@ -31,13 +31,13 @@ const Navbar = () => {
       ),
       href: '/',
     },
-    {
-      title: 'About',
-      icon: (
-        <User className='h-full w-full ' />
-      ),
-      href: '/about',
-    },
+    // {
+    //   title: 'About',
+    //   icon: (
+    //     <User className='h-full w-full ' />
+    //   ),
+    //   href: '/about',
+    // },
     {
       title: 'Skills',
       icon: (
@@ -45,13 +45,13 @@ const Navbar = () => {
       ),
       href: '/skills',
     },
-    {
-      title: 'Education',
-      icon: (
-        <GraduationCap className='h-full w-full ' />
-      ),
-      href: '/education',
-    },
+    // {
+    //   title: 'Education',
+    //   icon: (
+    //     <GraduationCap className='h-full w-full ' />
+    //   ),
+    //   href: '/education',
+    // },
     {
       title: 'Projects',
       icon: (
@@ -61,7 +61,7 @@ const Navbar = () => {
     },
    
     {
-      title: 'Contact us',
+      title: 'Contact Me',
       icon: (
         <Mail className='h-full w-full ' />
       ),

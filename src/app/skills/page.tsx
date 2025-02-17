@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import Heading from '@/components/Heading';
-import { AnimatePresence } from 'framer-motion';
-import { Badge } from '@/components/ui/badge';
-import { LightbulbIcon } from 'lucide-react';
+import Heading from "@/components/Heading";
+import { AnimatePresence } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
+import { LightbulbIcon } from "lucide-react";
 import SkillPill, {
   type SkillPillProps,
-} from '@/components/skills/skills-pill';
-import FadeRight from '@/components/animation/fade-right';
-import { useDebounceValue } from '@/hooks/useDebounceValue';
-import { useScreenBreakpoint } from '@/hooks/useScreenBreakpoint';
-import { SKILLS_DATA } from '@/utility/skills';
+} from "@/components/skills/skills-pill";
+import FadeRight from "@/components/animation/fade-right";
+import { useDebounceValue } from "@/hooks/useDebounceValue";
+import { useScreenBreakpoint } from "@/hooks/useScreenBreakpoint";
+import { SKILLS_DATA } from "@/utility/skills";
 
 export interface SkillsShowcaseProps {
   skills: {
@@ -24,9 +24,8 @@ const SkillPage = () => {
   const isMobileDebonced = useDebounceValue(isMobile, 600);
 
   return (
-    // SKILLS PAGE
-    <div className="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
-      <Badge variant="secondary" className="gap-1.5 py-1 ">
+    <div className="min-h-[100vh] w-full relative flex flex-col items-start gap-5 overflow-hidden py-10 md:pt-40">
+      <Badge variant="secondary" className="gap-1.5 py-1">
         <LightbulbIcon className="w-4 h-4" />
         My Skills
       </Badge>

@@ -89,13 +89,13 @@ to connect, collaborate, and code together. Join the conversation and level up y
   ];
 
   return (
-    <div className="w-full relative flex flex-col items-start gap-5 pt-44 py-10 md:pt-40">
+    <div className="w-full relative flex flex-col items-start gap-5 py-10 md:pt-0">
       <Badge variant="secondary" className="gap-1.5 py-1">
         <Layers className="h-4 w-4" />
         Projects
       </Badge>
       <div className="flex flex-col gap-3">
-        <Heading>My Projects</Heading>
+        <Heading>Projects & Contributions</Heading>
         <FramerWrapper y={0} x={200}>
           <p className=" font-poppins text-lg w-full text-primary max-sm:text-base">
             I love to Build Cool Projects. Here, you&#x27;ll find a curated
@@ -107,7 +107,7 @@ to connect, collaborate, and code together. Join the conversation and level up y
         </FramerWrapper>
       </div>
 
-      <div className=" w-full flex flex-row flex-wrap gap-3 max-lg:flex-col">
+      <div className="w-full flex flex-row flex-wrap gap-3 max-lg:flex-col pb-8">
         {Projects.map((val, indx) => {
           return <ProjectCards key={indx} value={val} num={indx} />;
         })}

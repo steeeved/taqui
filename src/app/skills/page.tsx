@@ -24,7 +24,7 @@ const SkillPage = () => {
   const isMobileDebonced = useDebounceValue(isMobile, 600);
 
   return (
-    <div className="min-h-[100vh] w-full relative flex flex-col items-start gap-5 overflow-hidden py-10 md:pt-40">
+    <div className="w-full relative flex flex-col items-start gap-5 py-10 md:pt-0">
       <Badge variant="secondary" className="gap-1.5 py-1">
         <LightbulbIcon className="w-4 h-4" />
         My Skills

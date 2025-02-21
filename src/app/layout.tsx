@@ -93,7 +93,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${rubik.variable} overflow-y-scroll`}
+        className={`${poppins.variable} ${rubik.variable}`}
         style={{
           background:
             "linear-gradient(rgb(250 255 255 / .37), rgb(250 255 255 / .37)), url('/bg.webp')",
@@ -104,13 +104,11 @@ export default function RootLayout({
         }}
       >
         <ClientProviders>
-          <div
-            className={cn(
-              "max-w-screen-xl w-full mx-auto flex relative break-words h-dvh min-h-screen items-center justify-between pt-14 pb-4 bg-transparent max-sm:px-6 max-sm:pt-20"
-            )}
-          >
+          <div className={cn("relative min-h-screen w-[100vw] bg-transparent")}>
             <Navbar />
-            {children}
+            <div className="max-w-screen-xl w-full mx-auto flex !min-h-[100vh] pt-16 pb-8 px-6 lg:px-12">
+              {children}
+            </div>
           </div>
         </ClientProviders>
       </body>
